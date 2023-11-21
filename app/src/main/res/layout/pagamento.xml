@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity"
+    tools:openDrawer="start">
+
+        <Button
+            android:id="@+id/btnPrimario"
+            android:layout_width="168dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="156dp"
+            android:layout_marginTop="425dp"
+            android:layout_marginEnd="35dp"
+            android:letterSpacing="0.2"
+            android:text="Recusar"
+            android:textSize="40px"
+            app:backgroundTint="#B42828"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.576"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textoBarra"
+            app:layout_constraintVertical_bias="0.006"
+            tools:ignore="HardcodedText,PxUsage,UnusedAttribute" />
+
+        <Button
+            android:id="@+id/btnPrimario2"
+            android:layout_width="153dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="425dp"
+            android:layout_marginEnd="15dp"
+            android:letterSpacing="0.2"
+            android:text="Aceitar"
+            android:textSize="40px"
+            app:backgroundTint="#4CAF50"
+            app:layout_constraintEnd_toStartOf="@+id/btnPrimario"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textoBarra"
+            tools:ignore="HardcodedText,PxUsage,UnusedAttribute" />
+
+        <Button
+            android:id="@+id/btnPrimario3"
+            android:layout_width="173dp"
+            android:layout_height="59dp"
+            android:layout_marginTop="500dp"
+            android:letterSpacing="0.2"
+            android:text="Reclamação"
+            android:textSize="40px"
+            app:backgroundTint="#B42828"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.361"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textoBarra"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="HardcodedText,PxUsage,UnusedAttribute" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/baseline_menu_24"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="128dp"
+            android:layout_height="64dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.218"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/thinkblack" />
+
+        <TextView
+            android:id="@+id/textoBarra"
+            android:layout_width="301sp"
+            android:layout_height="0sp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="24dp"
+            android:text="Pagamento"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:fontWeight="700"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2"
+            tools:ignore="HardcodedText,TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/textoBarra3"
+            android:layout_width="114dp"
+            android:layout_height="29dp"
+            android:layout_marginTop="360dp"
+            android:layout_marginBottom="35dp"
+            android:text="Status"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:fontWeight="700"
+            app:layout_constraintBottom_toTopOf="@+id/btnPrimario2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textoBarra"
+            tools:ignore="HardcodedText,TextSizeCheck" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="80dp"
+            android:layout_height="83dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="19dp"
+            app:layout_constraintEnd_toStartOf="@+id/textoBarra"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2"
+            app:srcCompat="@drawable/factory_icon" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="103dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="85dp"
+            android:layout_marginEnd="77dp"
+            android:text="Código : "
+            app:layout_constraintEnd_toStartOf="@+id/textView2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textoBarra" />
+
+        <TextView
+            android:id="@+id/textView27"
+            android:layout_width="103dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="145dp"
+            android:layout_marginEnd="77dp"
+            android:text="Código : "
+            app:layout_constraintEnd_toStartOf="@+id/textView2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textoBarra" />
+
+        <TextView
+            android:id="@+id/textView28"
+            android:layout_width="103dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="175dp"
+            android:layout_marginEnd="77dp"
+            android:text="Descrição : "
+            app:layout_constraintEnd_toStartOf="@+id/textView2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textoBarra" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="153dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="85dp"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.565"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textoBarra" />
+
+        <TextView
+            android:id="@+id/textView29"
+            android:layout_width="169dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="175dp"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.603"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textoBarra" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="153dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="115dp"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.565"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textoBarra" />
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="153dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="145dp"
+            android:text="TextView"
+            app:layout_constraintTop_toBottomOf="@+id/textoBarra"
+            tools:layout_editor_absoluteX="146dp" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="120dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="115dp"
+            android:text="Pagamento : "
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textoBarra" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="360dp"
+            android:layout_marginEnd="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView10"
+            app:layout_constraintStart_toEndOf="@+id/imageView11"
+            app:layout_constraintTop_toBottomOf="@+id/textoBarra"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/baseline_access_time_24" />
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="360dp"
+            android:layout_marginEnd="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imageView9"
+            app:layout_constraintTop_toBottomOf="@+id/textoBarra"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/final_icon" />
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="360dp"
+            android:layout_marginEnd="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView9"
+            app:layout_constraintStart_toEndOf="@+id/textoBarra3"
+            app:layout_constraintTop_toBottomOf="@+id/textoBarra"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/pag_icon" />
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="185dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="260dp"
+            android:layout_marginEnd="210dp"
+            android:layout_marginBottom="58dp"
+            android:text="Aceitar Orçamento"
+            app:layout_constraintBottom_toTopOf="@+id/imageView11"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textoBarra" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

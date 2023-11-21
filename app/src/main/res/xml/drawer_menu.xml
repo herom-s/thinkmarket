@@ -1,0 +1,15 @@
+<!-- drawer_menu.xml -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_cliente"
+        android:title="Cliente" />
+    <item
+        android:id="@+id/nav_empresa"
+        android:title="Empresa" />
+    <item
+        android:id="@+id/nav_servico"
+        android:title="Serviço" />
+    <item
+        android:id="@+id/nav_conta"
+        android:title="Conta" />
+</menu>

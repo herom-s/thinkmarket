@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ThinkMarket</string>
+    <string name="endere_o_de_e_mail">Endereço de E-mail</string>
+    <string name="ou">Ou</string>
+    <string name="entrar">Entrar ➔</string>
+    <string name="cadastrar">Cadastrar ➔</string>
+    <string name="logo">logo</string>
+    <string name="senha">Senha</string>
+</resources>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_ordem"
+            android:icon="@drawable/home_icon"
+            android:title="Ordens de Serviço" />
+        <item
+            android:id="@+id/nav_empresa"
+            android:icon="@drawable/factory_icon"
+            android:title="Empresa" />
+        <item
+            android:id="@+id/nav_servico"
+            android:icon="@drawable/service_icon"
+            android:title="Serviços" />
+    </group>
+
+    <group android:checkableBehavior="single">
+
+        <item android:title="Conta">
+            <menu>
+                <item
+                    android:id="@+id/nav_login"
+                    android:icon="@drawable/login_icon"
+                    android:title="Entrar" />
+                <item
+                    android:id="@+id/nav_conta"
+                    android:icon="@drawable/profile_icon"
+                    android:title="Perfil" />
+                <item
+                    android:id="@+id/nav_logout"
+                    android:icon="@drawable/logout_icon"
+                    android:title="Sair" />
+            </menu>
+        </item>
+
+    </group>
+
+</menu>
