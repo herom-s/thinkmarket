@@ -1,5 +1,6 @@
 package com.example.thinkmarket.data
 
+import com.example.thinkmarket.data.model.Empresa
 import com.example.thinkmarket.data.model.User
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -35,7 +36,23 @@ class UserDataSource(private var auth: FirebaseAuth, private var db: FirebaseFir
             Result.Error(IOException("Error cadastro in", e))
         }
     }
-    fun logout() {
 
+    fun createEmpresa(nome: String, cnpj: String, telefone: String, email: String, senha: String): Result<FirebaseUser>{
+        return try {
+            auth.createUserWithEmailAndPassword(email, senha).addOnCompleteListener{task ->
+                if(task.isSuccessful) {
+                    val empresa = Empresa(uid = task.result.user!!.uid, cnpj = cnpj, telefone = telefone)
+                    db.collection("empresas").document(nome).set(empresa)
+                }else{
+                    throw Exception()
+                }
+            }
+            Result.Success(auth.currentUser!!)
+        } catch (e: Throwable) {
+            Result.Error(IOException("Error cadastro in", e))
+        }
+    }
+    fun logout() {
+        auth.signOut()
     }
 }

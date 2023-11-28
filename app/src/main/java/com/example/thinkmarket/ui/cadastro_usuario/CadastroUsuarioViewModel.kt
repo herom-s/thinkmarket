@@ -1,4 +1,4 @@
-package com.example.thinkmarket.ui.register
+package com.example.thinkmarket.ui.cadastro_usuario
 
 import android.util.Patterns
 import androidx.lifecycle.LiveData
@@ -24,7 +24,7 @@ class CadastroUsuarioViewModel(private val userRepository: UserRepository) : Vie
         senha: String,
     ) {
         // can be launched in a separate asynchronous job
-        val result = userRepository.create(nome, cpfCnpj, endereco, telefone, email, senha)
+        val result = userRepository.createUser(nome, cpfCnpj, endereco, telefone, email, senha)
 
         if (result is Result.Success) {
             _cadastroResult.value =

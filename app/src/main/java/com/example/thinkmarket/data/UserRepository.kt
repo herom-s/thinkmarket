@@ -37,8 +37,16 @@ class UserRepository(val dataSource: UserDataSource) {
         return result
     }
 
-    fun create(nome: String, cpfCnpj: String, endereco: String, telefone: String, email: String, senha: String): Result<FirebaseUser> {
+    fun createUser(nome: String, cpfCnpj: String, endereco: String, telefone: String, email: String, senha: String): Result<FirebaseUser> {
         val result = dataSource.createUser(nome, cpfCnpj, endereco, telefone, email, senha)
+        if (result is Result.Success) {
+            setLoggedInUser(result.data)
+        }
+        return result
+    }
+
+    fun createEmpresa(nome: String, cnpj: String, telefone: String, email: String, senha: String): Result<FirebaseUser> {
+        val result = dataSource.createEmpresa(nome, cnpj, telefone, email, senha)
         if (result is Result.Success) {
             setLoggedInUser(result.data)
         }

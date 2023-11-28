@@ -13,7 +13,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.thinkmarket.R
 import com.example.thinkmarket.databinding.FragmentLoginBinding
-import com.example.thinkmarket.ui.register.CadastroUsuarioFragment
+import com.example.thinkmarket.ui.cadastro_usuario.CadastroUsuarioFragment
 
 class LoginFragment : Fragment() {
 
@@ -37,11 +37,11 @@ class LoginFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         loginViewModel = ViewModelProvider(this, LoginViewModelFactory())[LoginViewModel::class.java]
 
-        val usernameEditText = binding.txtfEmail
-        val passwordEditText = binding.txtfSenha
-        val loginButton = binding.btnLogin
-        val registerButton = binding.btnVoltar
-        val loadingProgressBar = binding.loading
+        val usernameEditText = binding.txtfEmailLogin
+        val passwordEditText = binding.txtfSenhaLogin
+        val loginButton = binding.btnLoginLogin
+        val registerButton = binding.btnCadastroLogin
+        val loadingProgressBar = binding.loadingLogin
 
         loginViewModel.loginFormState.observe(viewLifecycleOwner,
             Observer { loginFormState ->
