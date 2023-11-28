@@ -3,11 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav"
-    app:startDestination="@id/act_cadastro_empresa">
+    app:startDestination="@id/mainActivity">
 
     <activity
         android:id="@+id/login"
-        android:name="com.example.thinkmarket.act_login"
+        android:name="com.example.thinkmarket.ActLogin"
         android:label="login" />
     <activity
         android:id="@+id/mainActivity"
@@ -16,6 +16,6 @@
         tools:layout="@layout/esq_senha" />
     <activity
         android:id="@+id/act_cadastro_empresa"
-        android:name="com.example.thinkmarket.act_cadastro_empresa"
+        android:name="com.example.thinkmarket.ActCadastroEmpresa"
         android:label="act_cadastro_empresa" />
 </navigation>

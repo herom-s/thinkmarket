@@ -13,7 +13,7 @@
         android:theme="@style/Theme.ThinkMarket"
         tools:targetApi="31">
         <activity
-            android:name=".act_login"
+            android:name=".ActLogin"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
