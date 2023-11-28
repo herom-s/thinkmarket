@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/home">
+
+    <fragment
+        android:id="@+id/actLogin"
+        android:name="com.example.thinkmarket.ActLogin"
+        android:label="ActLogin"
+        tools:layout="@layout/login" >
+        <action
+            android:id="@+id/action_actLogin_to_actEsqSenha"
+            app:destination="@id/actEsqSenha" />
+        <action
+            android:id="@+id/action_actLogin_to_home"
+            app:destination="@id/home" />
+    </fragment>
+    <fragment
+        android:id="@+id/actEsqSenha"
+        android:name="com.example.thinkmarket.ActEsqSenha"
+        android:label="ActEsqSenha"
+        tools:layout="@layout/esq_senha"  >
+        <action
+            android:id="@+id/action_actEsqSenha_to_home"
+            app:destination="@id/home" />
+    </fragment>
+    <fragment
+        android:id="@+id/actOrdemInfo"
+        android:name="com.example.thinkmarket.ActOrdemInfo"
+        android:label="ActOrdemInfo"
+        tools:layout="@layout/ordem_info" >
+        <action
+            android:id="@+id/action_actOrdemInfo_to_menuDrop"
+            app:destination="@id/menuDrop" />
+    </fragment>
+    <fragment
+        android:id="@+id/actServicoInfo"
+        android:name="com.example.thinkmarket.ActServicoInfo"
+        android:label="ActServicoInfo"
+        tools:layout="@layout/servico_info" >
+        <action
+            android:id="@+id/action_actServicoInfo_to_menuDrop"
+            app:destination="@id/menuDrop" />
+    </fragment>
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.thinkmarket.MainActivity"
+        android:label="login"
+        tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/home"
+        android:name="com.example.thinkmarket.home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home_to_menuDrop"
+            app:destination="@id/menuDrop" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuDrop"
+        android:name="com.example.thinkmarket.MenuDrop"
+        android:label="fragment_menu_drop"
+        tools:layout="@layout/fragment_menu_drop" >
+        <action
+            android:id="@+id/action_menuDrop_to_actLogin"
+            app:destination="@id/actLogin" />
+        <action
+            android:id="@+id/action_menuDrop_to_actServicoInfo"
+            app:destination="@id/actServicoInfo" />
+        <action
+            android:id="@+id/action_menuDrop_to_actOrdemInfo"
+            app:destination="@id/actOrdemInfo" />
+        <action
+            android:id="@+id/action_menuDrop_to_actDadosUsuario"
+            app:destination="@id/actDadosUsuario" />
+    </fragment>
+    <fragment
+        android:id="@+id/actDadosUsuario"
+        android:name="com.example.thinkmarket.ActDadosUsuario"
+        android:label="ActDadosUsuario"
+        tools:layout="@layout/dados_usuario"  >
+        <action
+            android:id="@+id/action_actDadosUsuario_to_home"
+            app:destination="@id/home" />
+    </fragment>
+</navigation>

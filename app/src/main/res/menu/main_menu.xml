@@ -38,4 +38,25 @@
 
     </group>
 
+    <group android:checkableBehavior="single">
+
+        <item android:title="Administrador">
+            <menu>
+                <item
+                    android:id="@+id/nav_admuser"
+                    android:icon="@drawable/profile_icon"
+                    android:title="Usuários" />
+                <item
+                    android:id="@+id/nav_admempresa"
+                    android:icon="@drawable/factory_icon"
+                    android:title="Empresas" />
+                <item
+                    android:id="@+id/nav_admservico"
+                    android:icon="@drawable/service_icon"
+                    android:title="Serviços" />
+            </menu>
+        </item>
+
+    </group>
+
 </menu>
