@@ -6,6 +6,17 @@
     <string name="cadastrar">Cadastrar ➔</string>
     <string name="logo">logo</string>
     <string name="senha">Senha</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="msg_boas_vindas">Olá </string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_senha">Senha</string>
+    <string name="error_nome">Nome não válido</string>
+    <string name="error_cpfCnpj">CPF/CNPJ não válido</string>
+    <string name="error_endereco">Endereço não válido</string>
+    <string name="error_telefone">Telefone não válido</string>
+    <string name="error_email">Email não válido</string>
+    <string name="error_senha">Senha precisa ser maior que 5 caracteres</string>
+    <string name="falha_login">"Falha no login"</string>
+    <string name="falha_cadastro">"Falha no cadastro"</string>
+
 </resources>

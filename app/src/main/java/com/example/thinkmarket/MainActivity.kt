@@ -1,23 +1,19 @@
 package com.example.thinkmarket
 
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.navigation.NavController
-import androidx.navigation.Navigation
-import androidx.navigation.findNavController
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import com.example.thinkmarket.ui.login.LoginFragment
 
 class MainActivity : AppCompatActivity() {
-
-    private lateinit var navController: NavController
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+        replaceFragment(LoginFragment())
     }
 
-    override fun onSupportNavigateUp(): Boolean {
-        navController = findNavController(androidx.navigation.fragment.R.id.nav_host_fragment_container)
-        return navController.navigateUp() || super.onSupportNavigateUp()
+    private fun replaceFragment(fragment : Fragment) {
+        supportFragmentManager.beginTransaction().replace(R.id.layout_container, fragment).commit()
     }
 }
