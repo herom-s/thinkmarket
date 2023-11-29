@@ -22,7 +22,7 @@
         app:srcCompat="@drawable/thinkblack" />
 
     <EditText
-        android:id="@+id/txtfEmail"
+        android:id="@+id/txtfEmail_Login"
         android:layout_width="320dp"
         android:layout_height="48dp"
         android:layout_marginTop="10dp"
@@ -30,14 +30,14 @@
         android:hint="Endereço de E-mail"
         android:inputType="textEmailAddress"
         android:textColorHint="#757575"
-        app:layout_constraintBottom_toTopOf="@id/txtfSenha"
+        app:layout_constraintBottom_toTopOf="@id/txtfSenha_Login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/icon"
         tools:ignore="HardcodedText,TextContrastCheck" />
 
     <EditText
-        android:id="@+id/txtfSenha"
+        android:id="@+id/txtfSenha_Login"
         android:layout_width="320dp"
         android:layout_height="48dp"
         android:layout_marginTop="10dp"
@@ -49,13 +49,13 @@
         app:cornerRadius="@null"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtfEmail"
+        app:layout_constraintTop_toBottomOf="@+id/txtfEmail_Login"
         app:strokeColor="@color/black"
         app:strokeWidth="100px"
         tools:ignore="HardcodedText,PxUsage" />
 
     <Button
-        android:id="@+id/btnLogin"
+        android:id="@+id/btnLogin_Login"
         android:layout_width="320dp"
         android:layout_height="48dp"
         android:layout_marginTop="5dp"
@@ -63,27 +63,27 @@
         android:text="Entrar ➔"
         android:textSize="40px"
         app:backgroundTint="#B42828"
-        app:layout_constraintBottom_toTopOf="@+id/btnEsqueceuSenha"
+        app:layout_constraintBottom_toTopOf="@+id/btnEsqueceuSenha_Login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtfSenha"
+        app:layout_constraintTop_toBottomOf="@+id/txtfSenha_Login"
         tools:ignore="HardcodedText,PxUsage,UnusedAttribute" />
 
     <ProgressBar
-        android:id="@+id/loading"
+        android:id="@+id/loading_Login"
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:indeterminate="false"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/btnLogin"
+        app:layout_constraintBottom_toBottomOf="@+id/btnLogin_Login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btnLogin"
+        app:layout_constraintTop_toTopOf="@+id/btnLogin_Login"
         tools:visibility="visible" />
 
     <Button
-        android:id="@+id/btnEsqueceuSenha"
+        android:id="@+id/btnEsqueceuSenha_Login"
         android:layout_width="320dp"
         android:layout_height="48dp"
         android:layout_marginTop="5dp"
@@ -100,7 +100,7 @@
         app:layout_constraintBottom_toTopOf="@id/textoBarra"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnLogin"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin_Login"
         app:strokeColor="#D60909"
         tools:ignore="HardcodedText,PxUsage,VisualLintButtonSize" />
 
@@ -110,8 +110,8 @@
         android:layout_height="27dp"
         android:text="Ou"
         android:textSize="20sp"
-        app:layout_constraintTop_toBottomOf="@+id/btnEsqueceuSenha"
-        app:layout_constraintBottom_toTopOf="@+id/btnVoltar"
+        app:layout_constraintTop_toBottomOf="@+id/btnEsqueceuSenha_Login"
+        app:layout_constraintBottom_toTopOf="@+id/btnCadastro_Login"
         app:layout_constraintEnd_toStartOf="@+id/barraDir"
         app:layout_constraintStart_toEndOf="@+id/barraEsq"
         tools:ignore="HardcodedText,TextSizeCheck" />
@@ -122,10 +122,10 @@
         android:layout_height="2dp"
         android:layout_margin="100px"
         android:background="@android:color/black"
-        app:layout_constraintBottom_toTopOf="@+id/btnVoltar"
+        app:layout_constraintBottom_toTopOf="@+id/btnCadastro_Login"
         app:layout_constraintEnd_toStartOf="@id/textoBarra"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnEsqueceuSenha"
+        app:layout_constraintTop_toBottomOf="@+id/btnEsqueceuSenha_Login"
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="PxUsage" />
 
@@ -135,15 +135,15 @@
         android:layout_height="2dp"
         android:layout_margin="100px"
         android:background="@android:color/black"
-        app:layout_constraintBottom_toTopOf="@+id/btnVoltar"
+        app:layout_constraintBottom_toTopOf="@+id/btnCadastro_Login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/textoBarra"
-        app:layout_constraintTop_toBottomOf="@+id/btnEsqueceuSenha"
+        app:layout_constraintTop_toBottomOf="@+id/btnEsqueceuSenha_Login"
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="PxUsage" />
 
     <Button
-        android:id="@+id/btnVoltar"
+        android:id="@+id/btnCadastro_Login"
         android:layout_width="320dp"
         android:layout_height="48dp"
         android:width="2dp"

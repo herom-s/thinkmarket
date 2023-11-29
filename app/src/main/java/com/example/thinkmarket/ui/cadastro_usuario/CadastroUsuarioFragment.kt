@@ -1,4 +1,4 @@
-package com.example.thinkmarket.ui.register
+package com.example.thinkmarket.ui.cadastro_usuario
 
 import android.os.Bundle
 import android.text.Editable
@@ -37,14 +37,14 @@ class CadastroUsuarioFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         cadastroUsuarioViewModel = ViewModelProvider(this, CadastroUsuarioViewModelFactory())[CadastroUsuarioViewModel::class.java]
 
-        val nomeEditText = binding.txtfNome
-        val cpfCnpjEditText = binding.txtfCpfCnpj
-        val enderecoEditText = binding.txtfEndereco
-        val telefoneEditText = binding.txtfTelefone
-        val emailEditText = binding.txtfEmail
-        val senhaEditText = binding.txtfSenha
-        val cadastrarButton = binding.btnCadastrar
-        val voltarButton = binding.btnVoltar
+        val nomeEditText = binding.txtfNomeCadUse
+        val cpfCnpjEditText = binding.txtfCpfCnpjCadUse
+        val enderecoEditText = binding.txtfEnderecoCadUse
+        val telefoneEditText = binding.txtfTelefoneCadUse
+        val emailEditText = binding.txtfEmailCadUse
+        val senhaEditText = binding.txtfSenhaCadUse
+        val cadastrarButton = binding.btnCadastrarCadUse
+        val voltarButton = binding.btnVoltarCadUse
 
         cadastroUsuarioViewModel.cadastroFormState.observe(viewLifecycleOwner,
             Observer { cadastroFormState ->
