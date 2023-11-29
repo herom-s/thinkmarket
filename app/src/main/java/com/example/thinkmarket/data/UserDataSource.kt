@@ -1,5 +1,7 @@
 package com.example.thinkmarket.data
 
+import android.content.ContentValues.TAG
+import android.util.Log
 import com.example.thinkmarket.data.model.Empresa
 import com.example.thinkmarket.data.model.User
 import com.google.firebase.auth.FirebaseAuth
@@ -54,5 +56,23 @@ class UserDataSource(private var auth: FirebaseAuth, private var db: FirebaseFir
     }
     fun logout() {
         auth.signOut()
+    }
+
+    fun update(email: String){
+        auth.currentUser!!.updateEmail(email)
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    Log.d(TAG, "User email address updated.")
+                }
+            }
+    }
+
+    fun delete(){
+        auth.currentUser!!.delete()
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    Log.d(TAG, "User account deleted.")
+                }
+            }
     }
 }

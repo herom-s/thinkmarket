@@ -53,6 +53,13 @@ class UserRepository(val dataSource: UserDataSource) {
         return result
     }
 
+    fun updateUser(nome: String, cpfCnpj: String, endereco: String, telefone: String, email: String){
+        dataSource.update(email)
+    }
+
+    fun deleteUser(user: FirebaseUser) {
+        dataSource.delete()
+    }
     private fun setLoggedInUser(user: FirebaseUser) {
         this.user = user
         // If user credentials will be cached in local storage, it is recommended it be encrypted

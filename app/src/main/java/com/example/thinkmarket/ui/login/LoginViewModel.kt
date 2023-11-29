@@ -4,10 +4,15 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import android.util.Patterns
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.viewmodel.initializer
+import androidx.lifecycle.viewmodel.viewModelFactory
+import com.example.thinkmarket.MainActivity
 import com.example.thinkmarket.data.UserRepository
 import com.example.thinkmarket.data.Result
 
 import com.example.thinkmarket.R
+import com.example.thinkmarket.ThinkMarketApplication
 
 class LoginViewModel(private val userRepository: UserRepository) : ViewModel() {
 
@@ -51,5 +56,15 @@ class LoginViewModel(private val userRepository: UserRepository) : ViewModel() {
     // A placeholder password validation check
     private fun isPasswordValid(password: String): Boolean {
         return password.length > 5
+    }
+
+    companion object {
+        val Factory: ViewModelProvider.Factory = viewModelFactory {
+            initializer {
+                val application = (this[ViewModelProvider.AndroidViewModelFactory.APPLICATION_KEY] as ThinkMarketApplication)
+                val userRepository = application.container.userRepository
+                LoginViewModel(userRepository  = userRepository)
+            }
+        }
     }
 }

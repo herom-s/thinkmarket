@@ -3,32 +3,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="single">
-
-        <item
-            android:id="@+id/nav_ordem"
-            android:icon="@drawable/home_icon"
-            android:title="Ordens de Serviço" />
-        <item
-            android:id="@+id/nav_empresa"
-            android:icon="@drawable/factory_icon"
-            android:title="Empresa" />
-        <item
-            android:id="@+id/nav_servico"
-            android:icon="@drawable/service_icon"
-            android:title="Serviços" />
+    <group
+        android:id="@+id/drawer_commun"
+        android:checkableBehavior="single">
+        <item android:title="">
+            <menu>
+                <item
+                    android:id="@+id/nav_home"
+                    android:icon="@drawable/home_icon"
+                    android:title="Home" />
+                <item
+                    android:id="@+id/nav_ordem"
+                    android:icon="@android:drawable/ic_menu_edit"
+                    android:title="Ordens de Serviço" />
+                <item
+                    android:id="@+id/nav_empresa"
+                    android:icon="@drawable/factory_icon"
+                    android:title="Empresa" />
+                <item
+                    android:id="@+id/nav_servico"
+                    android:icon="@drawable/service_icon"
+                    android:title="Serviços" />
+            </menu>
+        </item>
     </group>
 
-    <group android:checkableBehavior="single">
+    <group
+        android:id="@+id/drawer_conta"
+        android:checkableBehavior="single">
 
         <item android:title="Conta">
             <menu>
                 <item
-                    android:id="@+id/nav_login"
-                    android:icon="@drawable/login_icon"
-                    android:title="Entrar" />
-                <item
-                    android:id="@+id/nav_conta"
+                    android:id="@+id/nav_perfil_usuario"
                     android:icon="@drawable/profile_icon"
                     android:title="Perfil" />
                 <item
@@ -40,7 +47,10 @@
 
     </group>
 
-    <group android:checkableBehavior="single">
+    <group
+        android:id="@+id/drawer_admin"
+        android:checkableBehavior="single"
+        android:visible="false">
 
         <item android:title="Administrador">
             <menu>
@@ -57,7 +67,7 @@
                     android:icon="@drawable/service_icon"
                     android:title="Serviços" />
                 <item
-                    android:id="@+id/nav_cadempresa"
+                    android:id="@+id/nav_cad_empresa"
                     android:icon="@drawable/factory_icon"
                     android:title="Cadastrar Empresa" />
             </menu>
