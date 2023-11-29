@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/BtnPrimario"
+        android:id="@+id/btnCadastro_CadEmpre"
         android:layout_width="320dp"
         android:layout_height="70dp"
         android:layout_marginStart="48dp"
@@ -18,14 +18,14 @@
         android:text="Atualizar"
         android:textSize="40px"
         app:backgroundTint="#B42828"
-        app:layout_constraintBottom_toTopOf="@+id/BtnSecundario"
+        app:layout_constraintBottom_toTopOf="@+id/btnVoltar_CadEmpre"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="HardcodedText,PxUsage,UnusedAttribute" />
 
     <Button
-        android:id="@+id/BtnSecundario"
+        android:id="@+id/btnVoltar_CadEmpre"
         android:layout_width="320dp"
         android:layout_height="70dp"
         android:layout_marginBottom="40dp"
@@ -56,7 +56,7 @@
         android:layout_marginEnd="25dp"
         android:layout_marginBottom="20dp"
         android:background="@android:color/black"
-        app:layout_constraintBottom_toTopOf="@+id/BtnSecundario"
+        app:layout_constraintBottom_toTopOf="@+id/btnVoltar_CadEmpre"
         app:layout_constraintEnd_toStartOf="@+id/textoBarra"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="PxUsage" />
@@ -70,13 +70,13 @@
         android:layout_marginEnd="25dp"
         android:layout_marginBottom="67dp"
         android:background="@android:color/black"
-        app:layout_constraintBottom_toTopOf="@+id/BtnSecundario"
+        app:layout_constraintBottom_toTopOf="@+id/btnVoltar_CadEmpre"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textoBarra"
         tools:ignore="PxUsage" />
 
     <EditText
-        android:id="@+id/input6"
+        android:id="@+id/txtfSenha_CadEmpre"
         android:layout_width="320dp"
         android:layout_height="0dp"
         android:layout_marginStart="58dp"
@@ -88,7 +88,7 @@
         android:inputType="textPassword"
         android:textColorHint="#757575"
         app:cornerRadius="@null"
-        app:layout_constraintBottom_toTopOf="@+id/BtnPrimario"
+        app:layout_constraintBottom_toTopOf="@+id/btnCadastro_CadEmpre"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.588"
         app:layout_constraintStart_toStartOf="parent"
@@ -97,31 +97,29 @@
         tools:ignore="HardcodedText,PxUsage,TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/input5"
+        android:id="@+id/txtfEmail_CadEmpre"
         android:layout_width="320dp"
         android:layout_height="48dp"
         android:layout_marginBottom="30dp"
         android:autofillHints=""
-        android:background="@android:drawable/edit_text_material"
         android:hint="Endereço de E-mail"
         android:inputType="textEmailAddress"
         android:textColorHint="#757575"
-        app:layout_constraintBottom_toTopOf="@+id/input6"
+        app:layout_constraintBottom_toTopOf="@+id/txtfSenha_CadEmpre"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="HardcodedText,TextContrastCheck" />
 
     <EditText
-        android:id="@+id/input4"
+        android:id="@+id/txtfTelefone_CadEmpre"
         android:layout_width="320dp"
         android:layout_height="48dp"
         android:layout_marginBottom="30dp"
         android:autofillHints=""
-        android:background="@android:drawable/edit_text_material"
         android:hint="Telefone"
         android:inputType="number"
         android:textColorHint="#757575"
-        app:layout_constraintBottom_toTopOf="@+id/input5"
+        app:layout_constraintBottom_toTopOf="@+id/txtfEmail_CadEmpre"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="HardcodedText,TextContrastCheck" />
@@ -132,22 +130,20 @@
         android:layout_height="48dp"
         android:layout_marginBottom="30dp"
         android:autofillHints=""
-        android:background="@android:drawable/edit_text_material"
         android:hint="Endereço"
         android:inputType="text"
         android:textColorHint="#757575"
-        app:layout_constraintBottom_toTopOf="@+id/input4"
+        app:layout_constraintBottom_toTopOf="@+id/txtfTelefone_CadEmpre"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="HardcodedText,TextContrastCheck" />
 
     <EditText
-        android:id="@+id/input2"
+        android:id="@+id/txtfCnpj_CadEmpre"
         android:layout_width="320dp"
         android:layout_height="48dp"
         android:layout_marginBottom="30dp"
         android:autofillHints=""
-        android:background="@android:drawable/edit_text_material"
         android:hint="CPF/CNPJ"
         android:inputType="number"
         android:textColorHint="#757575"
@@ -157,16 +153,15 @@
         tools:ignore="HardcodedText,TextContrastCheck" />
 
     <EditText
-        android:id="@+id/input1"
+        android:id="@+id/txtfNomeEmpresa_CadEmpre"
         android:layout_width="320dp"
         android:layout_height="48dp"
         android:layout_marginBottom="30dp"
         android:autofillHints=""
-        android:background="@android:drawable/edit_text_material"
         android:hint="Nome"
         android:inputType="text"
         android:textColorHint="#757575"
-        app:layout_constraintBottom_toTopOf="@+id/input2"
+        app:layout_constraintBottom_toTopOf="@+id/txtfCnpj_CadEmpre"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="HardcodedText,TextContrastCheck" />
@@ -181,7 +176,7 @@
         android:textSize="48sp"
         android:textStyle="bold"
         app:fontWeight="700"
-        app:layout_constraintBottom_toTopOf="@+id/input1"
+        app:layout_constraintBottom_toTopOf="@+id/txtfNomeEmpresa_CadEmpre"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"

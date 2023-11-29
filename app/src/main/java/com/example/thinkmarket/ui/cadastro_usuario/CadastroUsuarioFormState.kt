@@ -1,4 +1,4 @@
-package com.example.thinkmarket.ui.register
+package com.example.thinkmarket.ui.cadastro_usuario
 
 data class CadastroUsuarioFormState(
     val nomeError: Int? = null,

@@ -1,4 +1,4 @@
-package com.example.thinkmarket.ui.register
+package com.example.thinkmarket.ui.cadastro_usuario
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
