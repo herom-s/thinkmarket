@@ -11,9 +11,9 @@ import androidx.annotation.StringRes
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.example.thinkmarket.R
 import com.example.thinkmarket.databinding.FragmentCadastroUsuarioBinding
-import com.example.thinkmarket.ui.login.LoginFragment
 
 class CadastroUsuarioFragment : Fragment() {
 
@@ -123,7 +123,7 @@ class CadastroUsuarioFragment : Fragment() {
         }
 
         voltarButton.setOnClickListener {
-            replaceFragment(LoginFragment())
+            findNavController().navigate(R.id.action_cadastroUsuarioFragment_to_loginFragment)
         }
     }
 
@@ -143,9 +143,4 @@ class CadastroUsuarioFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-
-    private fun replaceFragment(fragment : Fragment) {
-        requireActivity().supportFragmentManager.beginTransaction().replace(R.id.layout_container, fragment).commit()
-    }
-
 }

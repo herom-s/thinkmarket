@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -19,9 +19,9 @@
         app:srcCompat="@drawable/thinkblack" />
 
     <Button
-        android:id="@+id/btnCadastro_CadEmpre"
+        android:id="@+id/btnCadastro_EsqSenha"
         android:layout_width="320dp"
-        android:layout_height="70dp"
+        android:layout_height="46dp"
         android:layout_marginStart="48dp"
         android:layout_marginTop="80dp"
         android:layout_marginEnd="53dp"
@@ -32,11 +32,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Input5"
+        app:layout_constraintTop_toBottomOf="@+id/txtfEmail_EsqSenha"
         tools:ignore="HardcodedText,PxUsage,UnusedAttribute" />
 
     <EditText
-        android:id="@+id/Input5"
+        android:id="@+id/txtfEmail_EsqSenha"
         android:layout_width="320dp"
         android:layout_height="48dp"
         android:layout_marginStart="58dp"
@@ -52,4 +52,4 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView1"
         tools:ignore="HardcodedText,TextContrastCheck" />
 
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

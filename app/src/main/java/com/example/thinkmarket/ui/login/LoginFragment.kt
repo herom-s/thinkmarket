@@ -67,7 +67,7 @@ class LoginFragment : Fragment() {
                 }
                 loginResult.success?.let {
                     updateUiWithUser(it)
-                    findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
+                    findNavController().navigate(R.id.action_loginFragment_to_nav_home)
                 }
             })
 
@@ -103,7 +103,7 @@ class LoginFragment : Fragment() {
         }
 
         esquecerSenhaButton.setOnClickListener {
-            findNavController().navigate(R.id.action_loginFragment_to_actEsqSenha)
+            findNavController().navigate(R.id.action_loginFragment_to_esqueceuSenhaFragment)
         }
     }
 
@@ -122,9 +122,5 @@ class LoginFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
-    }
-
-    private fun replaceFragment(fragment : Fragment) {
-        requireActivity().supportFragmentManager.beginTransaction().replace(R.id.layout_container, fragment).commit()
     }
 }

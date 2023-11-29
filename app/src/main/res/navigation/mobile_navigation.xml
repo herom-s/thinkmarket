@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_login">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.thinkmarket.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_cadastroEmpresaFragment"
+            app:destination="@id/nav_cad_empresa" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_login"
+        android:name="com.example.thinkmarket.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_cadastroUsuarioFragment"
+            app:destination="@id/nav_cad_usuario" />
+        <action
+            android:id="@+id/action_loginFragment_to_nav_home"
+            app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_loginFragment_to_esqueceuSenhaFragment"
+            app:destination="@id/nav_esq_senha" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_cad_empresa"
+        android:name="com.example.thinkmarket.ui.cadastro_empresa.CadastroEmpresaFragment"
+        android:label="fragment_cadastro_empresa"
+        tools:layout="@layout/fragment_cadastro_empresa" >
+        <action
+            android:id="@+id/action_cadastroEmpresaFragment_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_cad_usuario"
+        android:name="com.example.thinkmarket.ui.cadastro_usuario.CadastroUsuarioFragment"
+        android:label="fragment_cadastro_usuario"
+        tools:layout="@layout/fragment_cadastro_usuario" >
+        <action
+            android:id="@+id/action_cadastroUsuarioFragment_to_loginFragment"
+            app:destination="@id/nav_login" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_esq_senha"
+        android:name="com.example.thinkmarket.ui.esqueceu_senha.esqueceuSenhaFragment"
+        android:label="fragment_esqueceu_senha"
+        tools:layout="@layout/fragment_esqueceu_senha" >
+        <action
+            android:id="@+id/action_esqueceuSenhaFragment_to_loginFragment"
+            app:destination="@id/nav_login" />
+    </fragment>
+
+</navigation>

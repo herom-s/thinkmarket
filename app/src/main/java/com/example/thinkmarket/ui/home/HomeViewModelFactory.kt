@@ -4,7 +4,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.thinkmarket.data.UserDataSource
 import com.example.thinkmarket.data.UserRepository
-import com.example.thinkmarket.ui.login.LoginViewModel
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -17,7 +16,7 @@ class HomeViewModelFactory : ViewModelProvider.Factory {
     @Suppress("UNCHECKED_CAST")
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(HomeViewModel::class.java)) {
-            return LoginViewModel(
+            return HomeViewModel(
                 userRepository = UserRepository(
                     dataSource = UserDataSource(auth, db)
                 )

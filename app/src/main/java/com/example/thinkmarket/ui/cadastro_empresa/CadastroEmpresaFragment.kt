@@ -1,19 +1,19 @@
 package com.example.thinkmarket.ui.cadastro_empresa
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.annotation.StringRes
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.example.thinkmarket.R
 import com.example.thinkmarket.databinding.FragmentCadastroEmpresaBinding
-import com.example.thinkmarket.ui.login.LoginFragment
 
 class CadastroEmpresaFragment : Fragment() {
 
@@ -112,7 +112,7 @@ class CadastroEmpresaFragment : Fragment() {
         }
 
         voltarButton.setOnClickListener {
-            replaceFragment(LoginFragment())
+            findNavController().navigate(R.id.action_cadastroEmpresaFragment_to_nav_home)
         }
     }
 
@@ -130,10 +130,6 @@ class CadastroEmpresaFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
-    }
-
-    private fun replaceFragment(fragment : Fragment) {
-        requireActivity().supportFragmentManager.beginTransaction().replace(R.id.layout_container, fragment).commit()
     }
 
 }
