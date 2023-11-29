@@ -19,4 +19,7 @@
     <string name="falha_login">"Falha no login"</string>
     <string name="falha_cadastro">"Falha no cadastro"</string>
 
+    <string name="open">Nav Open</string>
+    <string name="close">Nav Close</string>
+
 </resources>
