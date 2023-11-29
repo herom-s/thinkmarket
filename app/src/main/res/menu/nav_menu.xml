@@ -54,6 +54,10 @@
                     android:id="@+id/nav_admservico"
                     android:icon="@drawable/service_icon"
                     android:title="Serviços" />
+                <item
+                    android:id="@+id/nav_cadempresa"
+                    android:icon="@drawable/factory_icon"
+                    android:title="Cadastrar Empresa" />
             </menu>
         </item>
 

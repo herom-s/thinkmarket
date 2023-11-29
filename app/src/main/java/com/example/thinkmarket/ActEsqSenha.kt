@@ -9,9 +9,13 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.thinkmarket.databinding.FragmentLoginBinding
 
-class ActLogin : Fragment() {
+class ActEsqSenha : Fragment() {
 
-    private lateinit var _binding: FragmentLoginBinding
+    private lateinit var _binding: FragmentEsqSenhaBinding
+
+    class FragmentEsqSenhaBinding {
+
+    }
 
 
     private val binding get() = _binding!!
@@ -21,20 +25,11 @@ class ActLogin : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View {
-        _binding = FragmentLoginBinding.inflate(inflater, container, false)
+        _binding = FragmentEsqSenhaBinding().inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.btnCadastroLogin.setOnClickListener{
-            findNavController().navigate(R.id.action_loginFragment_to_cadastroUsuarioFragment)
-        }
-        binding.btnLoginLogin.setOnClickListener{
-            findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
-        }
-        binding.btnLoginLogin.setOnClickListener{
-            findNavController().navigate(R.id.action_loginFragment_to_actEsqSenha)
         }
     }
-}
