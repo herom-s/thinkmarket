@@ -11,9 +11,9 @@ import androidx.annotation.StringRes
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.example.thinkmarket.R
 import com.example.thinkmarket.databinding.FragmentLoginBinding
-import com.example.thinkmarket.ui.cadastro_usuario.CadastroUsuarioFragment
 
 class LoginFragment : Fragment() {
 
@@ -41,6 +41,7 @@ class LoginFragment : Fragment() {
         val passwordEditText = binding.txtfSenhaLogin
         val loginButton = binding.btnLoginLogin
         val registerButton = binding.btnCadastroLogin
+        val esquecerSenhaButton = binding.btnEsqueceuSenhaLogin
         val loadingProgressBar = binding.loadingLogin
 
         loginViewModel.loginFormState.observe(viewLifecycleOwner,
@@ -66,6 +67,7 @@ class LoginFragment : Fragment() {
                 }
                 loginResult.success?.let {
                     updateUiWithUser(it)
+                    findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
                 }
             })
 
@@ -97,7 +99,11 @@ class LoginFragment : Fragment() {
         }
 
         registerButton.setOnClickListener {
-            replaceFragment(CadastroUsuarioFragment())
+            findNavController().navigate(R.id.action_loginFragment_to_cadastroUsuarioFragment)
+        }
+
+        esquecerSenhaButton.setOnClickListener {
+            findNavController().navigate(R.id.action_loginFragment_to_actEsqSenha)
         }
     }
 
